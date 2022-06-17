@@ -7,12 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: git status
-      - run: git branch
-    steps:
       # Check out theis repo
       - uses: actions/checkout@v2
+      - run: git status
+      - run: git branch
 
       # Start a Slack workflow using a webhook trigger
       # https://github.com/slackapi/slack-github-action
